@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ProyectoMetamodelo2/src" modelPluginID="ProyectoMetamodelo2"
+    modelName="Genrarmodelo2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Metamodelo.ecore</foreignModel>
+  <genPackages prefix="Metamodelo" basePackage="proyectomodelo2" disposableProviderFactory="true"
+      ecorePackage="Metamodelo.ecore#/">
+    <genClasses ecoreClass="Metamodelo.ecore#//Paquete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Paquete/nombrePaquete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Paquete/claseabstracta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Paquete/clase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Paquete/interface"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Clase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Clase/nombreClase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/operaciones"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/asociacion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/agregacion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/herencia"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/implementacion"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/paquete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Clase/atributos"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Operaciones">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Operaciones/nombreOperacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Operaciones/encapsulamiento"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Operaciones/datatype"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Atributos">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Atributos/nombreAtributo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Atributos/encapculamiento"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Atributos/datatype"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Metamodelo.ecore#//Atributos/clase"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Parametros">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Parametros/nombreParametro"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Parametros/datatype"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//DataType/nombreDataType"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Asociacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Asociacion/clase"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Metamodelo.ecore#//ClaseAbstracta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//ClaseAbstracta/nombreClaseAbstracta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//ClaseAbstracta/atributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//ClaseAbstracta/operaciones"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Metamodelo.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Interface/nombreInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Interface/operaciones"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Metamodelo.ecore#//Interface/paquete"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Referencia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Referencia/nombreReferencia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Metamodelo.ecore#//Referencia/multiplicidad"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Implementacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Implementacion/clase"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Herencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Herencia/clase"/>
+    </genClasses>
+    <genClasses ecoreClass="Metamodelo.ecore#//Agregacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Metamodelo.ecore#//Agregacion/clase"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
